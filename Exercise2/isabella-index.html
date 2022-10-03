@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+        <link href="/Exercise2/isabella-stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+    <header> 
+        <h1 id="title">Survey Form</h1>
+    </header> 
+    
+    <form id="survey-form" class="survey-form">
+  
+        <div class="form">
+            <label id="name-label" 
+                  for="name">Name:</label>
+            <input 
+                   type="text"
+                   name="name"
+                   id="name"
+                   placeholder="Enter your name" required/>    
+        </div>
+       <br>
+        <div class="form">
+             <label id="email-label" 
+                    for="email">E-Mail:</label>
+             <input
+                     type = "email"
+                     name = "email"
+                     id = "email"
+                     placeholder = "Enter your E-mail adress"
+                     required/> 
+        </div>
+            <br>
+         
+        <div class="form">
+          <label id="number-label" name="age" 
+                 for="number">Age:</label>
+              <input
+                      type="number"
+                      name="age"
+                      id="number"
+                      min="18"
+                      max="99"
+                      placeholder="Age"/> 
+        </div>
+          
+      
+        <div class ="form">
+         <p>Something you want to share with us?</p>
+            <textarea
+                    id = "comments"
+                    class = "input-textarea"
+                    name = "comments"
+                    placeholde = "Enter text here ...">
+            </textarea> 
+       </div>
+    </form>
+
+    <button onclick="buttonClick" id="submit">Send</button>
+
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        document.getElementById("submit").addEventListener("click", buttonClick);
+
+function buttonClick () {
+
+Swal.fire({
+  title: 'Are you sure you want to send?',
+  text: "You won't be able to change this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#00e600',
+  cancelButtonColor: '#cc0000',
+  confirmButtonText: 'Yes, send it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Send!',
+      'You will receive a mail from us soon.',
+      'success'
+    )
+  }
+})
+
+}
+
+    </script>
+</body>
+</html>

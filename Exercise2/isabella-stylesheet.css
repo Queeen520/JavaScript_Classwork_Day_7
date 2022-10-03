@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Aldrich&family=Alike+Angular&family=Laila&family=Libre+Bodoni:ital@1&family=Ramabhadra&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient( 280deg,
+      rgba(200, 155, 180, 0.5),
+      rgba(200, 155, 180, 0.4) ),   
+url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvay0xMC1tLTIwNzcuanBn.jpg);
+  background-size: cover;
+}
+
+header {
+  display: grid;
+  margin: auto;
+  width: 50%;
+  border: 0px;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+#title {
+  font-family: Libre Bodoni;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  background: rgba(260, 180, 195, 0.92);
+  border-radius: 20px;
+  box-shadow: 0px 0px 13px 20px rgba(0, 0, 0, 0.15);
+  font-family: Ramabhadra;
+  font-size: 20px;
+  border: none;
+}
+
+label input {
+    width: fit-content;
+    height: fit-content;
+}
+
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+#submit {
+  display: grid;
+  margin: auto;
+  background: #623075;
+  border-radius: 15px;
+  border-width: 0px;
+  font-family: Verdana;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 20px 10px 20px;
+}
