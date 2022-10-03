@@ -10,10 +10,11 @@
 
 header { 
     display:flex;
-    height: 3cm;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
 }
 
 header input[type=text] {
@@ -24,12 +25,15 @@ header input[type=text] {
 }
 
 ul {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
     padding-right: 30px;
 }
 
 li {
-    display: inline;
+    display: flex;
+    flex-direction: row;
 }
 
 h1 {
@@ -176,4 +180,50 @@ footer {
     font-size: 14px;
     font-family: calibri;
     color: white;
+}
+
+
+/* for small screens */
+
+@media screen and (max-width: 480px) {
+    
+    header {width: 100%; height: 2cm;}
+    
+    ul {padding-right: 10px;}
+
+    h1 {padding-left: 0.5cm;font-size: 1cm;letter-spacing: 1px;}
+
+    nav a {font-size: 0.5cm;}
+
+    .foodPics {display: grid;grid-template-columns: 1fr;grid-template-rows: repeat(9, 1fr);grid-column-gap: 1px;grid-row-gap: 1px;width: 100%;height: 100%;}
+    
+        .burger {grid-area: 1 / 1 / 2 / 2;}
+        
+        .pizza {grid-area: 2 / 1 / 3 / 2;}
+    
+        .veggie {grid-area: 3 / 1 / 4 / 2;}
+    
+        .soup1 {grid-area: 4 / 1 / 5 / 2;}
+    
+        .soup2 {grid-area: 5 / 1 / 6 / 2;}
+    
+        .soup3 {grid-area: 6 / 1 / 7 / 2;}
+    
+        .cake {grid-area: 7 / 1 / 8 / 2;}
+    
+        .brownies {grid-area: 8 / 1 / 9 / 2;}
+    
+        .muffins {grid-area: 9 / 1 / 10 / 2;}
+
+        footer {height: 2cm;align-items: center;}
+             
+        .info a {font-size: 0.3cm;}
+            
+        .icons {padding: 2px;}
+            
+        .icons img {padding-left: 5px;padding-right: 5px;}
+            
+        .copyright {padding-top: 10px;}
+            
+        .copyright p {font-size: 8px;padding-bottom: 5px;}
 }
