@@ -9,9 +9,9 @@
 </head>
 <body>
 
-    <header> 
+<header> 
         <h1 id="title">Survey Form</h1>
-    </header> 
+</header> 
     
     <form id="survey-form" class="survey-form">
   
@@ -22,9 +22,12 @@
                    type="text"
                    name="name"
                    id="name"
-                   placeholder="Enter your name" required/>    
+                   placeholder="Enter your name" 
+                   required/>    
         </div>
-       <br>
+
+      <br>
+
         <div class="form">
              <label id="email-label" 
                     for="email">E-Mail:</label>
@@ -35,7 +38,8 @@
                      placeholder = "Enter your E-mail adress"
                      required/> 
         </div>
-            <br>
+            
+        <br>
          
         <div class="form">
           <label id="number-label" name="age" 
@@ -49,7 +53,6 @@
                       placeholder="Age"/> 
         </div>
           
-      
         <div class ="form">
          <p>Something you want to share with us?</p>
             <textarea
@@ -58,12 +61,12 @@
                     name = "comments"
                     placeholde = "Enter text here ...">
             </textarea> 
-       </div>
+        </div>
 
        
-       <!-- sweetalert added to a onclick function --> 
+    <!-- sweetalert added to a onclick function --> 
 
-    <button onclick="buttonClick" id="submit">Send</button>
+        <button onclick="buttonClick" id="submit">Send</button>
 
     </form>
 
@@ -94,6 +97,8 @@ Swal.fire({
 })
 
 }
+
+
 
     </script>
 </body>
